@@ -15,7 +15,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
-TEMPLATE_DIRS = (TEMPLATE_PATH,)
+#TEMPLATE_DIRS = (TEMPLATE_PATH,)
 
 STATIC_PATH = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (STATIC_PATH,)
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'tango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['',], #EITHER PROVIDE PATH HERE OR PUT '', IN []
+        'DIRS': [TEMPLATE_PATH,], #EITHER PROVIDE PATH HERE OR PUT '', IN []
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
